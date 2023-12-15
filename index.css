@@ -1,0 +1,216 @@
+:root{
+    --main-color:#483b7e;
+    --secondary-color: white;
+    --tertiary-color: #edebf2;
+    --text-color: #202124;
+}
+
+html{
+    background-color: var(--tertiary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+a{
+    text-decoration: none;
+    color: #2278e8;
+}
+
+p{
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+hr{
+    border-width: 0;
+    border-bottom: 1px solid #dadce0;
+    margin: 0;
+}
+
+
+form{
+    margin: 0.75rem auto;
+    width: 40.65rem;
+    display: grid;
+    row-gap: 0.75rem;
+}
+
+fieldset{
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    background-color: var(--secondary-color);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0.5rem;
+}
+legend{
+    position: absolute;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+
+table{
+    text-align: left;
+}
+th{
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+}
+
+/* td:nth-child(odd), th:nth-child(odd) {
+    background-color: var(--tertiary-color);
+} */
+
+
+input:focus{
+    outline: none;
+}
+
+input[type="text"],input[type="email"],input[type="number"],input[type="date"],input[type="time"],textarea{
+    margin: 1rem 0;
+    width: 100%;
+    border-width: 0 0 1px 0;
+}
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="date"]:focus,input[type="time"]:focus,textarea:focus{
+    border-width: 0 0 2px 0;
+    border-color: var(--main-color);
+}
+
+input[type="radio"]:checked,input[type="checkbox"]:checked{
+    accent-color: var(--main-color);
+}
+
+input[type="radio"]:focus,input[type="checkbox"]:focus{
+    box-shadow: 0 0 0.75rem #888888 ;
+}
+
+select{
+    width: 10rem;
+    height: 3rem;
+    padding: 0 1rem;
+    background-color: #00000000;
+    border-radius: 0.25rem;
+    border: 0.2rem solid var(#dadce0);
+    border-style: solid;
+}
+
+button{
+    width: 5rem;
+    height: 2.25rem;
+    border-width: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+button[type="submit"]{
+    border-radius: 0.3rem;
+    background-color: var(--main-color);
+    color: white;
+}
+
+button[type="reset"]{
+    background-color: #00000000;
+    color: var(--main-color);
+}
+
+footer div{
+    font-size: 0.75rem;
+    margin: 1rem 0;
+}
+
+
+
+.fieldsetBody{
+    padding: 1.2rem;
+}
+
+
+.titlePageHeader{
+    height: 0.7rem;
+    background-color: var(--main-color);
+}
+
+.fieldsetHeader{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 3rem;
+}
+
+.titlePageEmail{
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+}
+.email{
+    color: #5f6368;
+    font-weight: 700;
+}
+.redText{
+    color: #ff0000;
+}
+.buttonsContainer{
+    display: flex;
+    justify-content:space-between;
+}
+.coverPage{
+    width: 100%;
+    height: 10rem;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:center;
+}
+
+
+#checkboxContainer{
+    display: flex;
+}
+
+.checkboxColumn{
+    flex:50%;
+}
+
+#dietSolverCoverPage{
+    background-image: url(images/dietplan.jpg);
+}
+
+#genericSolverCoverPage{
+    background-image: url(images/genericSolverBackground.jpg);
+}
+
+#passNote{
+    text-align: left;
+}
+#endNote{
+    text-align: center;
+}
+#logo{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5d5868;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <head>
+        <title>Generic Solver</title>
+        <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <script src="scripts/polyRegression.js"></script>
+        <script src="scripts/quadraticSplineInterpolation.js"></script>
+        <script src="scripts/gaussJordan.js"></script>
+        <script src="scripts/matrixHandlers.js"></script>
+        <script src="scripts/onLoadHandlerGenericSolver.js"></script>
+        <script src="scripts/graphHandler.js"></script>
+    </head>
+    <body>
+        <form>
+			<fieldset class="coverPage" id="genericSolverCoverPage">
+			</fieldset>
+
+			<fieldset class="titlePage">
+				<div class="titlePageHeader"></div>
+				<div class="fieldsetBody">
+					<h1>Generic Solvers</h1>
+					<p>
+						This boi can perform Quadratic Spline Interpolation and
+                        Polynomial Regression given any degree input and any
+                        value you want to estimate.
+					</p>
+				</div>
+				<hr/>
+				<div class="fieldsetBody titlePageEmail">
+					<span class="email">jpmonreal@up.edu.ph</span> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Switch account</a>
+					<br/>
+					<br/>
+					<span class="redText">*Required</span>
+				</div>
+			</fieldset>
+
+            
+			<fieldset>
+				<legend>Quadratic Spline Interpolation</legend>
+				<div class="fieldsetHeader"></div>
+
+				<div class="fieldsetBody">
+					<label>Upload your data here:</label>
+                    <br/>
+                    <input id="dataQSI" type="file" name="Data" accpet=".csv" required/><br/>
+
+                    <br/>
+
+                    <table id="tableQSI">
+
+                    </table>
+
+                    <br/>
+
+                    <label>Enter value of x you want to estimate:</label>
+                    <br/>
+                    <input id="xValueQSI" type="number" name="XValue" placeholder="Enter x value" required/><br/>
+				
+                    <br/>
+
+                    <div class="buttonsContainer">
+                        <button id="submitQSI" type="submit" onclick="showQuadraticSplineInterpolation(event)">Submit</button>
+                    </div>
+
+                    <div id="functionIntervalsContainer">
+
+                    </div>
+                    <div class="answerContainer">
+                        <h3>The estimated y value at the given x value is <span id="estimateQSI">_______</span>.</h3>
+                    </div>
+                </div>
+
+			</fieldset>
+
+
+
+            <fieldset>
+				<legend>Polynomial Regression</legend>
+				<div class="fieldsetHeader"></div>
+
+				<div class="fieldsetBody">
+                    <label>Upload your data here:</label>
+                    <br/>
+					<input id="dataPR" type="file" name="Data" accept=".csv" required/><br/>
+
+                    <br/>
+
+                    <table id="tablePR">
+
+                    </table>
+
+                    <br/>
+
+                    <label>Enter the degree of polynomial:</label>
+                    <br/>
+					<input id="degreePR" type="number" name="Degree" placeholder="Enter degree value" required/><br/>
+                    <br/>
+
+                    <label>Enter value of x you want to estimate:</label>
+                    <br/>
+					<input id="xValuePR" type="number" name="XValue" placeholder="Enter x value" required/><br/>
+                    
+                    <br/>
+                    
+                    <div class="buttonsContainer">
+                        <button id="submitPR" type="submit" onclick="showPolynomialRegression(event)">Submit</button>
+                    </div>
+
+                    <div class="answerContainer">
+                        <h3>Polynomial Regression Function: </h3>
+                        <h5> >    <span id="functionPR">_______</span></h5>
+                        <h3>The estimated y value at the given x value is <span id="estimatePR">_______</span></h3>
+                    </div>
+                </div>
+
+			</fieldset>
+
+
+			<footer>
+				<div id="passNote">Never submit passwords through Gurgle From.</div>
+				<div id="endNote">This content is neither created nor endorsed by Gurgle. <a href="">Report Abuse</a> - <a href="">Terms of Service</a> - <a href="">Privacy Policy</a></div>
+				<div id="logo"><strong>Gurgle</strong> From</div>
+			</footer>
+		</form>
+    </body>
+</html>

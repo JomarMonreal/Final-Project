@@ -1,0 +1,86 @@
+<!--
+    Sources:
+    https://www.lifepointhospital.in/how-to-create-a-healthy-and-sustainable-diet-plan-for-weight-loss/ 
+-->
+
+<!DOCTYPE html>
+    <head>
+        <title>Diet Solver</title>
+        <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <script src="data/nutritionalValues.js"></script>
+        <script src="scripts/polyRegression.js"></script>
+        <script src="scripts/quadraticSplineInterpolation.js"></script>
+        <script src="scripts/gaussJordan.js"></script>
+        <script src="scripts/matrixHandlers.js"></script>
+        <script src="scripts/graphHandler.js"></script>
+        <script src="scripts/onLoadHandlerDietSolver.js"></script>
+        <script src="scripts/dietSolver.js"></script>
+    </head>
+    <body>
+        <form>
+			<fieldset class="coverPage" id="dietSolverCoverPage">
+			</fieldset>
+
+			<fieldset class="titlePage">
+				<div class="titlePageHeader"></div>
+				<div class="fieldsetBody">
+					<h1>Diet Problem Solver</h1>
+					<p>
+						Find the cheapest and most nutritious combination
+                        of foods that will satisfy all the daily nutritional requirements of an individual,
+                        which will minimize cost and meet constraints
+                        but will still satisfy the nutritional needs. We include constraints that regulate the number of
+                        calories and amounts of vitamins, minerals, fats, sodium and cholesterol in the diet. A
+                        certain food option may only have 0-10 servings.
+
+					</p>
+				</div>
+				<hr/>
+				<div class="fieldsetBody titlePageEmail">
+					<span class="email">jpmonreal@up.edu.ph</span> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Switch account</a>
+					<br/>
+					<br/>
+					<span class="redText">*Required</span>
+				</div>
+			</fieldset>
+
+		
+
+			<fieldset>
+				<legend>Plan Your Diet</legend>
+				<div class="fieldsetHeader"></div>
+
+				<div class="fieldsetBody">
+					
+				    Check the foods you might want to consider:
+                    <div id="checkboxContainer">
+                        <div class="checkboxColumn" id="checkboxContainer1"></div>
+                        <div class="checkboxColumn" id="checkboxContainer2"></div>
+                    </div>
+                    <br/>
+
+                    <table id="dietTable"></table>
+                    <div class="answerContainer">
+                        <h3>The cost of this optimal diet is <span id="optimalDietCost">_______</span>.</h3>
+                    </div>
+				</div>
+
+                
+			</fieldset>
+
+
+			<div class="buttonsContainer">
+				<button id="submit" type="submit" onclick="createDietPlan(event)">Submit</button>
+				<button id="reset" type="reset">Clear form</button>
+			</div>
+			<footer>
+				<div id="passNote">Never submit passwords through Gurgle From.</div>
+				<div id="endNote">This content is neither created nor endorsed by Gurgle. <a href="">Report Abuse</a> - <a href="">Terms of Service</a> - <a href="">Privacy Policy</a></div>
+				<div id="logo"><strong>Gurgle</strong> From</div>
+			</footer>
+		</form>
+
+        
+    </body>
+</html>
