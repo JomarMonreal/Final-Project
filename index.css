@@ -177,6 +177,11 @@ footer div{
     display: flex;
     justify-content:space-between;
 }
+.resetSelectAllContainer{
+    display: flex;
+    justify-content: right;
+}
+
 .coverPage{
     width: 100%;
     height: 10rem;

@@ -295,4 +295,18 @@ const clearOutput = (e) => {
     e.preventDefault();
     document.getElementById("dietTable").replaceChildren();
     document.getElementById("optimalDietCost").innerText = "_________";
+    const checkBoxes = document.getElementsByClassName("foodCheckbox");
+    for (let i = 0; i < checkBoxes.length; i++) {
+        const checkBox = checkBoxes[i];
+        checkBox.checked = false;
+    }
+}
+
+const selectAll = (e) => {
+    e.preventDefault();
+    const checkBoxes = document.getElementsByClassName("foodCheckbox");
+    for (let i = 0; i < checkBoxes.length; i++) {
+        const checkBox = checkBoxes[i];
+        checkBox.checked = true;
+    }
 }

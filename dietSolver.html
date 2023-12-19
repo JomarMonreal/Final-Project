@@ -72,7 +72,10 @@
 
 			<div class="buttonsContainer">
 				<button id="submit" type="submit" onclick="createDietPlan(event)">Submit</button>
-				<button id="reset" type="reset">Clear form</button>
+				<div class="resetSelectAllContainer">
+					<button id="selectAllButton" type="submit" onclick="selectAll(event)">Select All</button>
+					<button id="reset" type="reset" onclick="clearOutput(event)">Clear form</button>
+				</div>
 			</div>
 			<footer>
 				<div id="passNote">Never submit passwords through Gurgle From.</div>
